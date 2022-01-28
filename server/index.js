@@ -21,6 +21,10 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
+app.get("/", (req, res) => {
+  res.send("hey");
+});
+
 app.listen(port, () => {
   console.log(`server is up & running on port ${port},let's get crazy`);
 });
